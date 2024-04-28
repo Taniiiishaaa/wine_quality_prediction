@@ -101,6 +101,16 @@ where , /home/ec2-user is the path to the home directory in the instance. /job i
 # Running the Prediction Application without Docker
 
 To run the prediction application without docker, the following packages are needed 
+
+# Conclusion
+
+Utilized AWS EMR to create a Spark cluster for distributed data processing.
+Employed Spark to build a wine quality prediction ML model, leveraging its parallel computing capabilities across multiple EC2 instances for efficient model training.
+Trained the ML model on a dataset of wine features and quality ratings.
+Implemented model saving and loading functionalities to ensure seamless integration into the prediction application.
+Developed an application running on a single EC2 instance to perform wine quality prediction using the trained model.
+# Program Output: 
+The application provided predictions for wine quality based on input features, allowing users to assess the quality of wine samples.
 Pyspark
 JAVA JDK
 numpy
