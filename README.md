@@ -1,6 +1,6 @@
 # wine_quality_prediction
 
-This giude explains the procedure to use AWS services to train ML (Machine Learning) model on multiple parallel EC2(Elastic Compute Cloud) instances. The ML program is written in python using Apache Spark MLlib libraries. The training and prediction programs are configured to run inside a container.
+This project explains the procedure to use AWS services to train ML (Machine Learning) model on multiple parallel EC2(Elastic Compute Cloud) instances. The ML program is written in python using Apache Spark MLlib libraries. The training and prediction programs are configured to run inside a container.
 
 The Python programs used in this project can be found in python_code folder
 
@@ -51,7 +51,6 @@ Source path : /home/ec2-user
 Now we will configure the ML container for training Under Container Definitions click on "Add container"
 
 Container Name : wine-train-container
-Image : kruthika547nayak/winetrain:latest
 Memory Limits : *Soft Limit, 512
 Under Mount points ,
 
@@ -96,13 +95,12 @@ Run the following command to verify if the container has been installed
 
 After installing the image, two files must be present in order to run the container application properly (Modelfile and Inputdataset.csv). These two files can be uploaded on to the instances using WinSCP. To run the container use the following command
 
-  $ sudo docker run -v /home/ec2-user/:job kruthika547nayak/winetest:latest TestDataset.csv
-where , /home/ec2-user is the path to the home directory in the instance. /job is the path mapped inside the conatiner kruthika547nayak/winetest:latest is the name of prediction docker conatiner TestDataset.csv is the name of the input file for prediction testing.
+  $ sudo docker run -v /home/ec2-user/:job tanisharajput/winetest:latest TestDataset.csv
+where , /home/ec2-user is the path to the home directory in the instance. /job is the path mapped inside the conatiner tanisharajput/winetest:latest is the name of prediction docker conatiner TestDataset.csv is the name of the input file for prediction testing.
 
 # Running the Prediction Application without Docker
 
-To run the prediction application without docker, the following packages are needed
-
+To run the prediction application without docker, the following packages are needed 
 Pyspark
 JAVA JDK
 numpy
