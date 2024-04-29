@@ -87,7 +87,7 @@ In order to run the prediction conatiner docker package is required. To install 
 Run the following command
     $ sudo yum install docker -y && sudo systemctl start docker
 The docker is pulled with the following command
-    $ sudo docker pull kruthika547nayak/winetest:latest
+    $ sudo docker pull tanisharajput/winetest:latest
 Run the following command to verify if the container has been installed
     $ sudo docker images
 
